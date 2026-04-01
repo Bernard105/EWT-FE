@@ -1,304 +1,372 @@
-.ewt-page{
-  --bg: #030712;
-  --panel: rgba(18, 24, 38, 0.78);
-  --panel-2: rgba(25, 33, 50, 0.7);
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f4f7fb;
-  --muted: #9aa3b2;
-  --muted-2: #778092;
-  --purple: #c084fc;
-  --purple-2: #9b5cff;
-  --cyan: #4fdcff;
-  --white: #ffffff;
-  --shadow: 0 20px 80px rgba(40, 80, 255, 0.15);
+/* ═══════════════════════════════════════════════════
+   Windows 2000 / Office 2000 Theme
+   EasyWorkTogether Enterprise Landing Page
+═══════════════════════════════════════════════════ */
+
+.ewt-page {
+  --bg:        #d4d0c8;
+  --panel:     #ece9d8;
+  --panel-2:   #d4d0c8;
+  --border:    rgba(0, 0, 0, 0.15);
+  --text:      #000000;
+  --muted:     #444444;
+  --muted-2:   #666666;
+  --win-blue:  #003c74;
+  --win-teal:  #008080;
+  --win-light: #ffffff;
+  --shadow:    inset -1px -1px 0 #808080, inset 1px 1px 0 #ffffff;
 }
 
-.ewt-page *{
+.ewt-page * {
   box-sizing: border-box;
 }
 
-.ewt-page, .ewt-page, .ewt-page{
+.ewt-page,
+.ewt-page {
   margin: 0;
   min-height: 100%;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: 'Tahoma', 'MS Sans Serif', 'Arial', sans-serif;
+  font-size: 14px;
+  /* Classic Windows 2000 teal/grey background */
+  background-color: #d4d0c8;
 }
 
-.ewt-page a{
-  color: inherit;
-  text-decoration: none;
+.ewt-page a {
+  color: #0000cc;
+  text-decoration: underline;
 }
 
-.ewt-page button{
+.ewt-page a:hover {
+  color: #cc0000;
+}
+
+.ewt-page button {
   font: inherit;
 }
 
-.ewt-page{
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(180, 122, 255, 0.16), transparent 28%),
-    radial-gradient(circle at 78% 30%, rgba(43, 212, 255, 0.12), transparent 24%),
-    linear-gradient(180deg, #030712 0%, #020611 100%);
+/* Remove dark-mode glows */
+.ewt-page .ewt-background-glow {
+  display: none;
 }
 
-.ewt-page .ewt-background-glow{
-  position: absolute;
-  pointer-events: none;
-  filter: blur(80px);
-  opacity: 0.7;
-}
-
-.ewt-page .ewt-glow-left{
-  width: 420px;
-  height: 720px;
-  left: -120px;
-  top: 40px;
-  background: linear-gradient(180deg, rgba(180, 122, 255, 0.26), transparent);
-}
-
-.ewt-page .ewt-glow-right{
-  width: 320px;
-  height: 900px;
-  right: -40px;
-  top: 320px;
-  background: linear-gradient(180deg, rgba(43, 212, 255, 0.18), transparent);
-}
-
-.ewt-page .ewt-main{
+/* ── Main container ─────────────────────────── */
+.ewt-page .ewt-main {
   position: relative;
   z-index: 2;
-  width: min(1280px, calc(100% - 48px));
+  width: min(1140px, calc(100% - 32px));
   margin: 0 auto;
 }
 
-.ewt-page .ewt-hero{
-  padding: 72px 0 90px;
+/* ── Hero ───────────────────────────────────── */
+.ewt-page .ewt-hero {
+  padding: 40px 0 50px;
   text-align: center;
 }
 
-.ewt-page .ewt-version-pill{
+/* "VERSION 4.0 NOW LIVE" pill → classic status bar look */
+.ewt-page .ewt-version-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 26px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
-  color: #c2cad7;
+  margin-bottom: 20px;
+  padding: 4px 12px;
+  background: var(--panel);
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  color: var(--text);
   font-size: 11px;
-  letter-spacing: 0.12em;
+  font-family: 'Tahoma', sans-serif;
+  letter-spacing: 0.06em;
+  box-shadow: 1px 1px 0 #000;
 }
 
-.ewt-page .ewt-version-pill .dot{
+.ewt-page .ewt-version-pill .dot {
   width: 8px;
   height: 8px;
-  border-radius: 999px;
-  background: #83ffbd;
-  box-shadow: 0 0 12px rgba(131, 255, 189, 0.9);
+  border-radius: 50%;
+  background: #00aa55;
+  border: 1px solid #005522;
+  box-shadow: none;
 }
 
-.ewt-page .ewt-hero-title{
-  margin: 0 auto;
-  max-width: 900px;
-  font-size: clamp(48px, 7vw, 104px);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
-  font-weight: 800;
+/* Hero title – "Speed of Thought" banner */
+.ewt-page .ewt-hero-title {
+  margin: 0 auto 0;
+  max-width: 860px;
+  font-size: clamp(32px, 5vw, 68px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Tahoma', 'Arial Black', sans-serif;
 }
 
-.ewt-page .ewt-hero-title span{
-  background: linear-gradient(90deg, #c38eff 10%, #6ba7ff 55%, #58e6ff 100%);
+/* Gradient text → Windows title-bar gradient text */
+.ewt-page .ewt-hero-title span {
+  background: linear-gradient(90deg, #003c74 0%, #1084d0 50%, #56c0e0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.ewt-page .ewt-hero-subtitle{
-  margin: 24px auto 0;
-  max-width: 760px;
-  font-size: 22px;
-  line-height: 1.7;
+.ewt-page .ewt-hero-subtitle {
+  margin: 18px auto 0;
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--muted);
+  font-family: 'Tahoma', sans-serif;
 }
 
-.ewt-page .ewt-hero-actions{
-  margin-top: 36px;
+.ewt-page .ewt-hero-actions {
+  margin-top: 28px;
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
-.ewt-page .ewt-btn{
-  min-width: 150px;
-  height: 54px;
-  padding: 0 22px;
-  border-radius: 14px;
-  border: 1px solid transparent;
-  font-weight: 700;
+/* ── Windows 2000 Buttons ───────────────────── */
+.ewt-page .ewt-btn {
+  min-width: 130px;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 0;
+  border: 1px solid;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  transition: none;
+  position: relative;
 }
 
-.ewt-page .ewt-btn:hover{
-  transform: translateY(-1px);
+/* Raised 3D bevel effect */
+.ewt-page .ewt-btn-primary {
+  background: #d4d0c8;
+  color: #000000;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset 1px 1px 0 #efefef, inset -1px -1px 0 #404040;
 }
 
-.ewt-page .ewt-btn-primary{
-  background: linear-gradient(90deg, #d89aff, #9b5cff);
-  color: #09090b;
-  box-shadow: 0 12px 35px rgba(155, 92, 255, 0.35);
+.ewt-page .ewt-btn-primary:hover {
+  transform: none;
+  background: #ddd9d1;
 }
 
-.ewt-page .ewt-btn-secondary{
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--border);
-  color: var(--text);
+.ewt-page .ewt-btn-primary:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset -1px -1px 0 #efefef, inset 1px 1px 0 #404040;
 }
 
-.ewt-page .ewt-btn-light{
-  background: var(--white);
-  color: #050914;
-  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.12);
+.ewt-page .ewt-btn-secondary {
+  background: #d4d0c8;
+  color: #000000;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset 1px 1px 0 #efefef, inset -1px -1px 0 #404040;
 }
 
-.ewt-page .ewt-capabilities{
-  padding: 40px 0 70px;
+.ewt-page .ewt-btn-secondary:hover {
+  transform: none;
+  background: #ddd9d1;
 }
 
-.ewt-page .ewt-section-heading{
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 30px;
-}
-
-.ewt-page .ewt-section-kicker{
-  display: inline-block;
-  margin-bottom: 14px;
-  color: #60d7ff;
-  letter-spacing: 0.2em;
-  font-size: 11px;
+.ewt-page .ewt-btn-light {
+  background: var(--win-blue);
+  color: #ffffff;
+  border-color: #003c74 #003c74 #003c74 #003c74;
+  box-shadow: none;
   font-weight: 700;
 }
 
-.ewt-page .ewt-section-heading h2{
-  margin: 0;
-  font-size: clamp(28px, 4vw, 52px);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+.ewt-page .ewt-btn-light:hover {
+  transform: none;
+  background: #1060a0;
 }
 
-.ewt-page .ewt-section-heading p{
-  max-width: 420px;
+/* ── Capabilities Section ───────────────────── */
+.ewt-page .ewt-capabilities {
+  padding: 20px 0 50px;
+}
+
+.ewt-page .ewt-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--win-teal);
+}
+
+.ewt-page .ewt-section-kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  background: var(--win-teal);
+  color: #ffffff;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ewt-page .ewt-section-heading h2 {
+  margin: 0;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  font-family: 'Tahoma', sans-serif;
+}
+
+.ewt-page .ewt-section-heading p {
+  max-width: 380px;
   color: var(--muted);
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.6;
   margin: 0;
 }
 
-.ewt-page .ewt-metrics{
-  margin: 30px 0 70px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+/* ── Metrics Section (Status Bar style) ──────── */
+.ewt-page .ewt-metrics {
+  margin: 14px 0 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  background: var(--panel);
+  box-shadow: inset 1px 1px 0 #404040, inset -1px -1px 0 #f0efe8;
 }
 
-.ewt-page .ewt-metric-item{
-  padding: 40px 18px;
+.ewt-page .ewt-metric-item {
+  padding: 28px 12px;
   text-align: center;
+  border-right: 1px solid #b0aea8;
 }
 
-.ewt-page .ewt-metric-item strong{
+.ewt-page .ewt-metric-item:last-child {
+  border-right: none;
+}
+
+.ewt-page .ewt-metric-item strong {
   display: block;
-  font-size: clamp(32px, 5vw, 56px);
-  letter-spacing: -0.05em;
-  margin-bottom: 10px;
+  font-size: clamp(26px, 4vw, 42px);
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+  color: var(--win-blue);
+  font-family: 'Tahoma', sans-serif;
 }
 
-.ewt-page .ewt-metric-item span{
+.ewt-page .ewt-metric-item span {
   color: var(--muted-2);
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.ewt-page .ewt-cta-section{
-  padding: 28px 0 90px;
+/* ── CTA Section ─────────────────────────────── */
+.ewt-page .ewt-cta-section {
+  padding: 14px 0 70px;
 }
 
-.ewt-page .ewt-cta-card{
-  max-width: 960px;
+/* Windows dialog box style */
+.ewt-page .ewt-cta-card {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 90px 24px;
+  padding: 0;
   text-align: center;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.07);
-  background:
-    radial-gradient(circle at 70% 50%, rgba(77, 221, 255, 0.08), transparent 28%),
-    linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  box-shadow: var(--shadow);
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  background: var(--panel);
+  box-shadow: 2px 2px 0 #000000;
 }
 
-.ewt-page .ewt-cta-card h2{
+/* Title bar */
+.ewt-page .ewt-cta-card::before {
+  content: "EasyWorkTogether Enterprise — Get Started";
+  display: block;
+  background: linear-gradient(90deg, #003c74 0%, #1064c8 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Tahoma', sans-serif;
+  padding: 5px 8px;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.ewt-page .ewt-cta-card h2 {
   margin: 0;
-  font-size: clamp(38px, 5vw, 74px);
-  line-height: 0.98;
-  letter-spacing: -0.05em;
+  font-size: clamp(28px, 4vw, 50px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  padding: 36px 24px 0;
+  font-family: 'Tahoma', sans-serif;
 }
 
-.ewt-page .ewt-cta-card p{
-  margin: 22px auto 34px;
-  max-width: 620px;
+.ewt-page .ewt-cta-card p {
+  margin: 16px auto 28px;
+  max-width: 560px;
   color: var(--muted);
-  line-height: 1.7;
-  font-size: 18px;
+  line-height: 1.6;
+  font-size: 13px;
+  padding: 0 24px;
 }
 
+.ewt-page .ewt-cta-card .ewt-btn-light {
+  margin-bottom: 36px;
+}
+
+/* ── Responsive ──────────────────────────────── */
 @media (max-width: 1100px) {
-  .ewt-page .ewt-metrics{
+  .ewt-page .ewt-metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .ewt-page .ewt-metric-item:nth-child(2) {
+    border-right: none;
+  }
+  .ewt-page .ewt-metric-item:nth-child(3) {
+    border-top: 1px solid #b0aea8;
+  }
+  .ewt-page .ewt-metric-item:nth-child(4) {
+    border-top: 1px solid #b0aea8;
+    border-right: none;
   }
 }
 
 @media (max-width: 720px) {
-  .ewt-page .ewt-main{
-    width: min(100% - 24px, 1280px);
+  .ewt-page .ewt-main {
+    width: min(100% - 16px, 1140px);
   }
-
-  .ewt-page .ewt-hero{
-    padding-top: 40px;
+  .ewt-page .ewt-hero {
+    padding-top: 24px;
   }
-
-  .ewt-page .ewt-hero-subtitle{
-    font-size: 16px;
+  .ewt-page .ewt-hero-subtitle {
+    font-size: 13px;
   }
-
-  .ewt-page .ewt-btn{
+  .ewt-page .ewt-btn {
     width: 100%;
   }
-
-  .ewt-page .ewt-hero-actions{
+  .ewt-page .ewt-hero-actions {
     flex-direction: column;
     align-items: stretch;
   }
-
-  .ewt-page .ewt-section-heading{
+  .ewt-page .ewt-section-heading {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .ewt-page .ewt-metrics{
+  .ewt-page .ewt-metrics {
     grid-template-columns: 1fr;
+  }
+  .ewt-page .ewt-metric-item {
+    border-right: none;
+    border-bottom: 1px solid #b0aea8;
   }
 }

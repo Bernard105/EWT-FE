@@ -1,109 +1,143 @@
-.ewt-page .ewt-header{
+/* Windows 2000 style TopNav / Menu Bar */
+
+.ewt-page .ewt-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(18px);
-  background: rgba(3, 7, 18, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: none;
+  background: var(--panel);
+  border-bottom: 2px solid #808080;
+  box-shadow: 0 2px 0 #000;
 }
 
-.ewt-page .ewt-header-inner{
-  width: min(1280px, calc(100% - 48px));
+/* Teal title-bar strip at the very top */
+.ewt-page .ewt-header::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #003c74 0%, #1084d0 40%, var(--win-teal) 100%);
+}
+
+.ewt-page .ewt-header-inner {
+  width: min(1140px, calc(100% - 32px));
   margin: 0 auto;
-  height: 72px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
-.ewt-page .ewt-nav{
+/* Horizontal menu bar style nav */
+.ewt-page .ewt-nav {
   display: flex;
-  gap: 28px;
+  gap: 0;
 }
 
-.ewt-page .ewt-nav-link{
+.ewt-page .ewt-nav-link {
   position: relative;
-  font-size: 14px;
-  color: var(--muted);
-  transition: 0.2s ease;
+  font-size: 13px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  color: var(--text);
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1px solid transparent;
 }
 
-.ewt-page .ewt-nav-link:hover, .ewt-page .ewt-nav-link.active{
-  color: #f0d5ff;
+.ewt-page .ewt-nav-link:hover {
+  background: var(--win-blue);
+  color: #ffffff;
+  border-color: transparent;
+  text-decoration: none;
 }
 
-.ewt-page .ewt-nav-link.active::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -22px;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--purple), var(--purple-2));
-  border-radius: 999px;
+.ewt-page .ewt-nav-link.active {
+  background: #ffffff;
+  color: var(--win-blue);
+  border-color: #808080 #ffffff #ffffff #808080;
+  text-decoration: none;
 }
 
-.ewt-page .ewt-header-actions{
+/* Remove bottom indicator line (not Win2k style) */
+.ewt-page .ewt-nav-link.active::after {
+  display: none;
+}
+
+/* Header right-side action buttons */
+.ewt-page .ewt-header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
 
-.ewt-page .ewt-preview-chip{
+/* Preview mode chip → classic status bar panel */
+.ewt-page .ewt-preview-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: #dce5f3;
-  font-size: 12px;
+  min-height: 22px;
+  padding: 0 8px;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  font-family: 'Tahoma', sans-serif;
+  letter-spacing: 0.01em;
+  border-radius: 0;
+  box-shadow: inset 1px 1px 0 #404040;
 }
 
-.ewt-page .ewt-preview-chip.preview{
-  color: #082a3c;
-  background: linear-gradient(135deg, #9aecff, #66d6ff);
-  border: none;
+.ewt-page .ewt-preview-chip.preview {
+  color: #003c74;
+  background: #b8d8f0;
+  border-color: #808080 #ffffff #ffffff #808080;
 }
 
-.ewt-page .ewt-preview-chip.live{
-  color: #ede7ff;
-  background: rgba(170, 129, 255, 0.16);
-  border-color: rgba(170, 129, 255, 0.26);
+.ewt-page .ewt-preview-chip.live {
+  color: #004400;
+  background: #b8f0b8;
+  border-color: #808080 #ffffff #ffffff #808080;
 }
 
-.ewt-page .ewt-icon-btn, .ewt-page .ewt-avatar-btn{
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  color: #dce5f3;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
+/* Classic Win2000 icon buttons */
+.ewt-page .ewt-icon-btn,
+.ewt-page .ewt-avatar-btn {
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  background: var(--panel);
+  color: var(--text);
+  width: 26px;
+  height: 26px;
+  border-radius: 0;
   cursor: pointer;
   display: grid;
   place-items: center;
+  font-size: 13px;
+  box-shadow: inset 1px 1px 0 #f0efe8, inset -1px -1px 0 #404040;
 }
 
-.ewt-page .ewt-avatar-btn{
-  background: linear-gradient(180deg, #f6e5d8, #c9ad98);
-  border: none;
+.ewt-page .ewt-icon-btn:hover,
+.ewt-page .ewt-avatar-btn:hover {
+  background: #ece9d8;
+}
+
+.ewt-page .ewt-avatar-btn {
+  background: linear-gradient(180deg, #e8d4c0, #c0a080);
+  border-color: #ffffff #808080 #808080 #ffffff;
 }
 
 @media (max-width: 1100px) {
-  .ewt-page .ewt-nav{
+  .ewt-page .ewt-nav {
     display: none;
   }
 }
 
 @media (max-width: 720px) {
-  .ewt-page .ewt-header-inner{
-    width: min(100% - 24px, 1280px);
+  .ewt-page .ewt-header-inner {
+    width: min(100% - 16px, 1140px);
   }
-
-  .ewt-page .ewt-header-actions{
-    gap: 8px;
+  .ewt-page .ewt-header-actions {
+    gap: 4px;
   }
 }
