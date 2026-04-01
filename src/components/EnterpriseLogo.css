@@ -1,0 +1,24 @@
+.elogo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.elogo-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.elogo.compact .elogo-wordmark {
+  font-size: 22px;
+}
+.elogo-primary { color: #ebf1ff; }
+.elogo-accent { color: #65dfff; }
+.elogo-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #92a1be;
+}

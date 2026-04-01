@@ -1,0 +1,107 @@
+.tm-page .sidebar-shell{
+  position: relative;
+  min-height: 100vh;
+  padding: 22px 16px 28px;
+  background:
+    linear-gradient(180deg, rgba(3, 10, 22, 0.94) 0%, rgba(4, 12, 24, 0.98) 100%),
+    radial-gradient(circle at 24% 48%, rgba(78, 255, 156, 0.18), transparent 10%);
+  border-right: 1px solid rgba(120, 149, 195, 0.12);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.03);
+}
+
+.tm-page .sidebar-topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 34px;
+  padding: 2px 8px 0;
+}
+
+.tm-page .sidebar-brand{
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #e7effd;
+}
+
+.tm-page .sidebar-chevron{
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: #8e9db8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.tm-page .sidebar-chevron:hover{
+  background: rgba(109, 133, 171, 0.12);
+  color: #d9e5fa;
+}
+
+.tm-page .sidebar-navlist{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tm-page .sidebar-navitem{
+  width: 100%;
+  min-height: 52px;
+  border-radius: 14px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #c8d5ea;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.tm-page .sidebar-navitem:hover{
+  transform: translateX(2px);
+  background: rgba(105, 125, 162, 0.12);
+  color: #edf4ff;
+}
+
+.tm-page .sidebar-navitem.is-active{
+  color: #f5f8ff;
+  background: linear-gradient(90deg, rgba(73, 88, 111, 0.72) 0%, rgba(73, 88, 111, 0.34) 100%);
+  box-shadow: inset 0 0 0 1px rgba(172, 194, 230, 0.06);
+}
+
+.tm-page .sidebar-navicon{
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  color: inherit;
+}
+
+.tm-page .sidebar-footerlink{
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: #bac8dc;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .tm-page .sidebar-shell{
+    min-height: auto;
+    padding-bottom: 86px;
+  }
+}

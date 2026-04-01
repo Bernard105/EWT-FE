@@ -1,0 +1,42 @@
+.tm-page .task-management-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) 420px;
+  gap: 0;
+  min-height: calc(100vh - 118px);
+}
+
+.tm-page .task-management-left{
+  padding-right: 0;
+}
+
+.tm-page .task-management-title{
+  margin: 0 0 18px;
+  font-size: 31px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  color: #f2f6ff;
+}
+
+.tm-page .task-management-right{
+  border-left: 1px solid rgba(148, 174, 216, 0.12);
+}
+
+@media (max-width: 1080px) {
+  .tm-page .task-management-layout{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    min-height: auto;
+  }
+
+  .tm-page .task-management-right{
+    border-left: 0;
+  }
+}
+
+
+@media (max-width: 1320px) {
+  .tm-page .task-management-layout{
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}

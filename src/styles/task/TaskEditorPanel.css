@@ -1,0 +1,238 @@
+.tm-page .task-editor-shell{
+  min-height: calc(100vh - 118px);
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  background:
+    linear-gradient(180deg, rgba(43, 53, 72, 0.92) 0%, rgba(20, 31, 50, 0.98) 100%),
+    radial-gradient(circle at 50% 0%, rgba(78, 113, 248, 0.14), transparent 32%);
+}
+
+.tm-page .task-editor-topbar{
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(146, 173, 217, 0.14);
+  background: color-mix(in srgb, var(--surface-4) 35%, transparent);
+}
+
+.tm-page .task-editor-cancel{
+  color: var(--text-1);
+  font-size: 17px;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+}
+
+.tm-page .task-editor-submit{
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(104, 150, 255, 0.96) 0%, rgba(163, 98, 255, 0.96) 100%);
+  color: #f9fbff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  box-shadow: 0 14px 24px rgba(74, 98, 178, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.tm-page .task-editor-body{
+  height: calc(100vh - 196px);
+  overflow: auto;
+  padding: 16px 20px 24px;
+}
+
+.tm-page .editor-field, .tm-page .editor-half-field{
+  margin-bottom: 18px;
+}
+
+.tm-page .editor-field label, .tm-page .editor-half-field label{
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-1);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.tm-page .editor-input, .tm-page .editor-selectbox, .tm-page .editor-surface{
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(180deg, var(--surface-3) 0%, var(--surface-2) 100%);
+  color: var(--text-1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.tm-page .editor-input{
+  height: 48px;
+  padding: 0 14px;
+}
+
+.tm-page .editor-box{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(180deg, var(--surface-3) 0%, var(--surface-2) 100%);
+}
+
+.tm-page .editor-toolbar{
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.tm-page .editor-toolbar button{
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tm-page .editor-toolbar-divider{
+  width: 1px;
+  height: 20px;
+  background: rgba(150, 177, 220, 0.18);
+}
+
+.tm-page .editor-surface{
+  min-height: 142px;
+}
+
+.tm-page .editor-surface-small{
+  min-height: 112px;
+}
+
+.tm-page .editor-row-two{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tm-page .editor-selectbox{
+  min-height: 48px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-2);
+}
+
+.tm-page .editor-selectbox-value{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-1);
+}
+
+.tm-page .editor-selectbox-value img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.tm-page .editor-select-placeholder{
+  color: var(--text-2);
+}
+
+.tm-page .editor-attachments-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tm-page .upload-more-link{
+  color: var(--primary);
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+.tm-page .editor-attachments-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tm-page .attachment-card{
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--surface-3) 0%, var(--surface-2) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.tm-page .attachment-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tm-page .attachment-card-add{
+  display: grid;
+  place-items: center;
+  color: var(--text-3);
+  border-style: dashed;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .tm-page .task-editor-shell{
+    min-height: auto;
+    border-left: 0;
+    border-radius: 18px;
+  }
+
+  .tm-page .task-editor-body{
+    height: auto;
+  }
+}
+
+
+@media (max-width: 1320px) {
+  .tm-page .editor-attachments-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .tm-page .task-editor-topbar{
+    padding: 14px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .tm-page .task-editor-submit{
+    width: 100%;
+  }
+
+  .tm-page .task-editor-body{
+    padding: 14px 14px 18px;
+  }
+
+  .tm-page .editor-row-two{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .tm-page .editor-attachments-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-page .editor-attachments-grid{
+    grid-template-columns: 1fr;
+  }
+}

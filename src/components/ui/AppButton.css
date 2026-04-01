@@ -1,0 +1,57 @@
+.app-btn {
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+.app-btn:hover { transform: translateY(-1px); }
+.app-btn.is-block { width: 100%; }
+.app-btn.is-primary {
+  background: linear-gradient(90deg, #d89aff, #9b5cff);
+  color: #05070f;
+}
+.app-btn.is-ghost {
+  border-color: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  color: #eef4ff;
+}
+.app-btn.is-secondary {
+  background: rgba(255,255,255,0.06);
+  color: #eef4ff;
+  border-color: rgba(255,255,255,0.08);
+}
+.app-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+.app-btn-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+body[data-app-theme='light'] .app-btn.is-primary {
+  background: linear-gradient(180deg, #2194ff 0%, #0071e3 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 113, 227, 0.18);
+}
+
+body[data-app-theme='light'] .app-btn.is-ghost {
+  border-color: rgba(215, 219, 228, 0.88);
+  background: rgba(255, 255, 255, 0.72);
+  color: #1d1d1f;
+}
+
+body[data-app-theme='light'] .app-btn.is-secondary {
+  background: rgba(247, 247, 248, 0.96);
+  color: #1d1d1f;
+  border-color: rgba(215, 219, 228, 0.88);
+}

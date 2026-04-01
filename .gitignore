@@ -1,0 +1,11 @@
+# Ẩn node_modules
+node_modules/
+
+# Ẩn các file cấu hình nhạy cảm
+.env
+.env.local
+config.json
+*.log
+# Ẩn thư mục build hoặc dist
+dist/
+build/

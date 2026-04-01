@@ -1,0 +1,72 @@
+.db-page .recent-activity{
+  grid-column: span 3;
+  min-height: 286px;
+  padding: 14px 18px 14px;
+}
+
+.db-page .activity-list{
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.db-page .activity-row{
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.db-page .activity-leading{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--activity-bg);
+  color: var(--activity-time);
+  overflow: hidden;
+}
+
+.db-page .activity-leading.avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.db-page .activity-text{
+  margin: 0;
+  font-size: 16px;
+  color: var(--activity-text);
+  letter-spacing: -0.02em;
+}
+
+.db-page .activity-time{
+  padding-left: 12px;
+  font-size: 16px;
+  color: var(--activity-time);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+@media (max-width: 1360px) {
+  .db-page .recent-activity{
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .db-page .recent-activity{
+    grid-column: span 1;
+  }
+
+  .db-page .activity-row{
+    grid-template-columns: 34px 1fr;
+    align-items: start;
+  }
+
+  .db-page .activity-time{
+    padding-left: 48px;
+  }
+}

@@ -1,0 +1,176 @@
+.ewt-page .ewt-feature-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.ewt-page .ewt-feature-card{
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)),
+    linear-gradient(135deg, rgba(255,255,255,0.02), rgba(48, 69, 109, 0.04));
+  border-radius: 16px;
+  display: flex;
+}
+
+.ewt-page .ewt-feature-card.large-left{ grid-column: span 8; }
+.ewt-page .ewt-feature-card.small{ grid-column: span 4; }
+.ewt-page .ewt-feature-card.wide{ grid-column: span 8; }
+
+.ewt-page .ewt-feature-content{
+  padding: 24px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.ewt-page .ewt-feature-content h3{
+  margin: 10px 0 10px;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.ewt-page .ewt-feature-content p{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 430px;
+}
+
+.ewt-page .ewt-feature-icon{
+  font-size: 22px;
+  color: var(--purple);
+}
+
+.ewt-page .ewt-badges{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ewt-page .ewt-badges span{
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(168, 114, 255, 0.12);
+  border: 1px solid rgba(168, 114, 255, 0.25);
+  color: #ddb5ff;
+}
+
+.ewt-page .ewt-badges span:last-child{
+  background: rgba(79, 220, 255, 0.09);
+  border-color: rgba(79, 220, 255, 0.22);
+  color: #8aefff;
+}
+
+.ewt-page .ewt-feature-link{
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--cyan);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.ewt-page .ewt-feature-visual{
+  flex: 1;
+  min-width: 260px;
+  position: relative;
+  background:
+    radial-gradient(circle at center, rgba(72, 255, 240, 0.08), transparent 50%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+.ewt-page .ewt-network-visual{
+  position: absolute;
+  inset: 18px;
+  opacity: 0.5;
+}
+
+.ewt-page .ewt-network-visual .node{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(205, 216, 255, 0.18);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.ewt-page .node-1{ top: 28%; left: 22%; }
+.ewt-page .node-2{ top: 20%; left: 52%; }
+.ewt-page .node-3{ top: 42%; left: 40%; }
+.ewt-page .node-4{ top: 52%; left: 64%; }
+.ewt-page .node-5{ top: 68%; left: 28%; }
+.ewt-page .node-6{ top: 72%; left: 54%; }
+.ewt-page .node-7{ top: 38%; left: 78%; }
+
+.ewt-page .ewt-network-visual .line{
+  position: absolute;
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  transform-origin: left center;
+}
+
+.ewt-page .line-1{ top: 30%; left: 24%; width: 34%; transform: rotate(-12deg); }
+.ewt-page .line-2{ top: 24%; left: 54%; width: 30%; transform: rotate(52deg); }
+.ewt-page .line-3{ top: 42%; left: 41%; width: 25%; transform: rotate(18deg); }
+.ewt-page .line-4{ top: 50%; left: 30%; width: 27%; transform: rotate(58deg); }
+.ewt-page .line-5{ top: 60%; left: 42%; width: 34%; transform: rotate(-35deg); }
+
+.ewt-page .ewt-chart-visual{
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 42%;
+  min-width: 220px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+}
+
+.ewt-page .ewt-chart-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9bf0bf;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.ewt-page .ewt-chart-header span{
+  display: block;
+  width: 80px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+}
+
+.ewt-page .ewt-chart-body{
+  height: 90px;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(193, 140, 255, 0.22), rgba(193, 140, 255, 0.08)),
+    rgba(255,255,255,0.02);
+}
+
+@media (max-width: 1100px) {
+  .ewt-page .ewt-feature-card.large-left, .ewt-page .ewt-feature-card.small, .ewt-page .ewt-feature-card.wide{
+    grid-column: span 12;
+  }
+
+  .ewt-page .ewt-feature-card{
+    flex-direction: column;
+  }
+
+  .ewt-page .ewt-feature-visual{
+    min-height: 220px;
+  }
+}

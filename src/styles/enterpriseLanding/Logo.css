@@ -1,0 +1,13 @@
+.ewt-page .ewt-logo{
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 22px;
+}
+
+.ewt-page .ewt-logo-primary{
+  color: #dfe6ff;
+}
+
+.ewt-page .ewt-logo-accent{
+  color: var(--cyan);
+}

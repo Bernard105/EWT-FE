@@ -1,0 +1,304 @@
+.ewt-page{
+  --bg: #030712;
+  --panel: rgba(18, 24, 38, 0.78);
+  --panel-2: rgba(25, 33, 50, 0.7);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f4f7fb;
+  --muted: #9aa3b2;
+  --muted-2: #778092;
+  --purple: #c084fc;
+  --purple-2: #9b5cff;
+  --cyan: #4fdcff;
+  --white: #ffffff;
+  --shadow: 0 20px 80px rgba(40, 80, 255, 0.15);
+}
+
+.ewt-page *{
+  box-sizing: border-box;
+}
+
+.ewt-page, .ewt-page, .ewt-page{
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.ewt-page a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.ewt-page button{
+  font: inherit;
+}
+
+.ewt-page{
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(180, 122, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 78% 30%, rgba(43, 212, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, #030712 0%, #020611 100%);
+}
+
+.ewt-page .ewt-background-glow{
+  position: absolute;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.7;
+}
+
+.ewt-page .ewt-glow-left{
+  width: 420px;
+  height: 720px;
+  left: -120px;
+  top: 40px;
+  background: linear-gradient(180deg, rgba(180, 122, 255, 0.26), transparent);
+}
+
+.ewt-page .ewt-glow-right{
+  width: 320px;
+  height: 900px;
+  right: -40px;
+  top: 320px;
+  background: linear-gradient(180deg, rgba(43, 212, 255, 0.18), transparent);
+}
+
+.ewt-page .ewt-main{
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.ewt-page .ewt-hero{
+  padding: 72px 0 90px;
+  text-align: center;
+}
+
+.ewt-page .ewt-version-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: #c2cad7;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.ewt-page .ewt-version-pill .dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #83ffbd;
+  box-shadow: 0 0 12px rgba(131, 255, 189, 0.9);
+}
+
+.ewt-page .ewt-hero-title{
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: clamp(48px, 7vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+
+.ewt-page .ewt-hero-title span{
+  background: linear-gradient(90deg, #c38eff 10%, #6ba7ff 55%, #58e6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ewt-page .ewt-hero-subtitle{
+  margin: 24px auto 0;
+  max-width: 760px;
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.ewt-page .ewt-hero-actions{
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ewt-page .ewt-btn{
+  min-width: 150px;
+  height: 54px;
+  padding: 0 22px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ewt-page .ewt-btn:hover{
+  transform: translateY(-1px);
+}
+
+.ewt-page .ewt-btn-primary{
+  background: linear-gradient(90deg, #d89aff, #9b5cff);
+  color: #09090b;
+  box-shadow: 0 12px 35px rgba(155, 92, 255, 0.35);
+}
+
+.ewt-page .ewt-btn-secondary{
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.ewt-page .ewt-btn-light{
+  background: var(--white);
+  color: #050914;
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.12);
+}
+
+.ewt-page .ewt-capabilities{
+  padding: 40px 0 70px;
+}
+
+.ewt-page .ewt-section-heading{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+.ewt-page .ewt-section-kicker{
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #60d7ff;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ewt-page .ewt-section-heading h2{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.ewt-page .ewt-section-heading p{
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ewt-page .ewt-metrics{
+  margin: 30px 0 70px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ewt-page .ewt-metric-item{
+  padding: 40px 18px;
+  text-align: center;
+}
+
+.ewt-page .ewt-metric-item strong{
+  display: block;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -0.05em;
+  margin-bottom: 10px;
+}
+
+.ewt-page .ewt-metric-item span{
+  color: var(--muted-2);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.ewt-page .ewt-cta-section{
+  padding: 28px 0 90px;
+}
+
+.ewt-page .ewt-cta-card{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 90px 24px;
+  text-align: center;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background:
+    radial-gradient(circle at 70% 50%, rgba(77, 221, 255, 0.08), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  box-shadow: var(--shadow);
+}
+
+.ewt-page .ewt-cta-card h2{
+  margin: 0;
+  font-size: clamp(38px, 5vw, 74px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.ewt-page .ewt-cta-card p{
+  margin: 22px auto 34px;
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+  .ewt-page .ewt-metrics{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .ewt-page .ewt-main{
+    width: min(100% - 24px, 1280px);
+  }
+
+  .ewt-page .ewt-hero{
+    padding-top: 40px;
+  }
+
+  .ewt-page .ewt-hero-subtitle{
+    font-size: 16px;
+  }
+
+  .ewt-page .ewt-btn{
+    width: 100%;
+  }
+
+  .ewt-page .ewt-hero-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ewt-page .ewt-section-heading{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ewt-page .ewt-metrics{
+    grid-template-columns: 1fr;
+  }
+}

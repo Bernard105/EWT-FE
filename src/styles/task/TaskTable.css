@@ -1,0 +1,123 @@
+.tm-page .task-table-shell{
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.tm-page .task-table-headbar{
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  background: linear-gradient(90deg, rgba(28, 44, 70, 0.92) 0%, rgba(19, 33, 53, 0.88) 100%);
+  border-bottom: 1px solid rgba(145, 172, 218, 0.14);
+}
+
+.tm-page .task-table-wrap{
+  overflow: auto;
+}
+
+.tm-page .task-table-grid{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tm-page .task-table-grid thead{
+  background: rgba(74, 91, 116, 0.4);
+}
+
+.tm-page .task-table-grid th, .tm-page .task-table-grid td{
+  height: 64px;
+  padding: 0 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(138, 167, 212, 0.16);
+}
+
+.tm-page .task-table-grid th{
+  color: #f0f5ff;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.tm-page .task-table-grid tbody tr{
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.tm-page .task-table-grid tbody tr:hover, .tm-page .task-table-grid tbody tr.is-selected{
+  background: linear-gradient(90deg, rgba(70, 88, 114, 0.26) 0%, rgba(50, 66, 92, 0.12) 100%);
+}
+
+.tm-page .checkbox-col{
+  width: 50px;
+}
+
+.tm-page .checkbox-box{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(154, 178, 218, 0.34);
+  background: color-mix(in srgb, var(--surface-2) 48%, transparent);
+}
+
+.tm-page .task-name-cell{
+  color: #eff5ff;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tm-page .status-pill{
+  display: inline-flex;
+  align-items: center;
+  min-width: 124px;
+  justify-content: center;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.tm-page .status-pill.is-todo{
+  background: linear-gradient(180deg, rgba(141, 152, 171, 0.96) 0%, rgba(116, 127, 145, 0.96) 100%);
+  color: var(--status-gray-text);
+}
+
+.tm-page .status-pill.is-progress{
+  background: linear-gradient(180deg, rgba(247, 210, 86, 0.98) 0%, rgba(236, 191, 53, 0.98) 100%);
+  color: #4a3900;
+}
+
+.tm-page .status-pill.is-completed{
+  background: linear-gradient(180deg, rgba(63, 209, 111, 0.98) 0%, rgba(35, 194, 89, 0.98) 100%);
+  color: #eefdf6;
+}
+
+.tm-page .assignee-cell{
+  display: flex;
+  align-items: center;
+}
+
+.tm-page .assignee-cell img{
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(239, 245, 255, 0.16);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.26);
+}
+
+.tm-page .due-date-cell{
+  color: #d4deef;
+  font-size: 17px;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
