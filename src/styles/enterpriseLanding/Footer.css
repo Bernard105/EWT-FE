@@ -1,102 +1,141 @@
-.ewt-page .ewt-footer{
-  padding: 30px 0 38px;
-  border-top: 1px solid rgba(255,255,255,0.04);
+/* Windows 2000 Footer — classic status bar / taskbar style */
+
+.ewt-page .ewt-footer {
+  padding: 20px 0 28px;
+  border-top: 2px solid #808080;
+  background: var(--panel);
+  box-shadow: inset 0 2px 0 #ffffff;
 }
 
-.ewt-page .ewt-footer-top, .ewt-page .ewt-footer-bottom{
-  width: min(1280px, calc(100% - 48px));
+.ewt-page .ewt-footer-top,
+.ewt-page .ewt-footer-bottom {
+  width: min(1140px, calc(100% - 32px));
   margin: 0 auto;
 }
 
-.ewt-page .ewt-footer-top{
+.ewt-page .ewt-footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
-  padding: 46px 0;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid #808080;
 }
 
-.ewt-page .ewt-footer-brand{
-  max-width: 360px;
+.ewt-page .ewt-footer-brand {
+  max-width: 300px;
 }
 
-.ewt-page .ewt-footer-brand p{
+.ewt-page .ewt-footer-brand p {
   color: var(--muted);
-  line-height: 1.7;
-  font-size: 15px;
-  margin: 18px 0 22px;
+  line-height: 1.6;
+  font-size: 12px;
+  margin: 12px 0 16px;
+  font-family: 'Tahoma', sans-serif;
 }
 
-.ewt-page .ewt-socials{
+/* Social links as Win2k toolbar buttons */
+.ewt-page .ewt-socials {
   display: flex;
-  gap: 12px;
+  gap: 6px;
 }
 
-.ewt-page .ewt-socials a{
-  width: 34px;
-  height: 34px;
+.ewt-page .ewt-socials a {
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  color: #d9e4f2;
-  background: rgba(255,255,255,0.03);
-}
-
-.ewt-page .ewt-footer-links{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 1fr));
-  gap: 40px;
-}
-
-.ewt-page .ewt-footer-column h4{
-  margin: 0 0 18px;
-  color: #dfe8f5;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  border-radius: 0;
+  color: var(--text);
+  background: var(--panel);
+  text-decoration: none;
   font-size: 12px;
-  letter-spacing: 0.18em;
+  box-shadow: inset 1px 1px 0 #f0efe8, inset -1px -1px 0 #404040;
 }
 
-.ewt-page .ewt-footer-column a{
+.ewt-page .ewt-socials a:hover {
+  background: #ece9d8;
+  color: var(--text);
+}
+
+.ewt-page .ewt-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 32px;
+}
+
+.ewt-page .ewt-footer-column h4 {
+  margin: 0 0 12px;
+  color: var(--win-blue);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: 700;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 4px;
+}
+
+.ewt-page .ewt-footer-column a {
   display: block;
-  color: var(--muted);
-  margin-bottom: 12px;
-  font-size: 14px;
+  color: #0000cc;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-family: 'Tahoma', sans-serif;
+  text-decoration: underline;
 }
 
-.ewt-page .ewt-footer-bottom{
-  padding-top: 26px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+.ewt-page .ewt-footer-column a:hover {
+  color: #cc0000;
+}
+
+/* Bottom bar — classic taskbar/status bar */
+.ewt-page .ewt-footer-bottom {
+  padding-top: 18px;
+  border-top: 1px solid #b0aea8;
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   color: var(--muted-2);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-family: 'Tahoma', sans-serif;
   flex-wrap: wrap;
 }
 
-.ewt-page .ewt-footer-bottom-links{
+.ewt-page .ewt-footer-bottom-links {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   flex-wrap: wrap;
+}
+
+.ewt-page .ewt-footer-bottom-links a {
+  color: #0000cc;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.ewt-page .ewt-footer-bottom-links a:hover {
+  color: #cc0000;
 }
 
 @media (max-width: 1100px) {
-  .ewt-page .ewt-footer-top{
+  .ewt-page .ewt-footer-top {
     flex-direction: column;
   }
 }
 
 @media (max-width: 720px) {
-  .ewt-page .ewt-footer-top, .ewt-page .ewt-footer-bottom{
-    width: min(100% - 24px, 1280px);
+  .ewt-page .ewt-footer-top,
+  .ewt-page .ewt-footer-bottom {
+    width: min(100% - 16px, 1140px);
   }
-
-  .ewt-page .ewt-footer-links{
+  .ewt-page .ewt-footer-links {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 18px;
   }
-
-  .ewt-page .ewt-footer-bottom{
+  .ewt-page .ewt-footer-bottom {
     flex-direction: column;
   }
 }

@@ -1,13 +1,20 @@
-.ewt-page .ewt-logo{
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  font-size: 22px;
+/* Windows 2000 Logo */
+
+.ewt-page .ewt-logo {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 17px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
 }
 
-.ewt-page .ewt-logo-primary{
-  color: #dfe6ff;
+.ewt-page .ewt-logo-primary {
+  color: #003c74;
 }
 
-.ewt-page .ewt-logo-accent{
-  color: var(--cyan);
+.ewt-page .ewt-logo-accent {
+  color: #008080;
 }

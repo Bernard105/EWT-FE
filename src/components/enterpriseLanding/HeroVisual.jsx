@@ -5,12 +5,12 @@ export default function HeroVisual() {
   return (
     <div className="ewt-hero-visual">
       <div className="ewt-hero-window-top">
+        <div className="ewt-window-title">EasyWorkTogether v4 - Dashboard</div>
         <div className="ewt-traffic-lights">
-          <span />
-          <span />
-          <span />
+          <span aria-label="Minimize" />
+          <span aria-label="Maximize" />
+          <span aria-label="Close" />
         </div>
-        <div className="ewt-window-title">EASYWORK_TOGETHER_V4_DASHBOARD</div>
       </div>
 
       <div className="ewt-hero-window-body">
