@@ -11,7 +11,7 @@ import "../styles/enterpriseLanding/EnterpriseLandingPage.css";
 const navItems = [
   { label: "Dashboard", to: ROUTES.dashboard },
   { label: "Tasks", to: ROUTES.tasks },
-  { label: "Workspaces", to: ROUTES.workspaceSelector },
+  { label: "Workspaces", to: ROUTES.workspaceSe },
   { label: "Analytics", to: ROUTES.analytics },
   { label: "Members", to: ROUTES.members },
   { label: "Setup", to: ROUTES.workspaceSetup },
@@ -60,15 +60,15 @@ const metrics = [
 ];
 
 const footerColumns = [
-  {
-    title: "PLATFORM",
-    links: [
-      { label: "Dashboard", to: ROUTES.home },
-      { label: "Analytics", to: ROUTES.workspaceInvitations },
-      { label: "Security", to: ROUTES.workspaceMembers },
-      { label: "Integrations", to: ROUTES.workspaceSetup },
-    ],
-  },
+  // {
+  //   title: "PLATFORM",
+  //   links: [
+  //     { label: "Dashboard", to: ROUTES.home },
+  //     { label: "Analytics", to: ROUTES.workspaceInvitations },
+  //     { label: "Security", to: ROUTES.workspaceMembers },
+  //     { label: "Integrations", to: ROUTES.workspaceSetup },
+  //   ],
+  // },
   {
     title: "COMPANY",
     links: [
